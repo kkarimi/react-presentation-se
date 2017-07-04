@@ -78,7 +78,9 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="Frontend is important part of architecture. Better FE means more performant application and infrastructure"
-        transition={["slide"]} bgColor="black">
+        transition={["slide"]}
+        bgColor="black"
+      >
         <Image
           src={images.kat.replace("/", "")}
           margin="0px auto 40px"
@@ -94,7 +96,9 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="Created both greenfield projects and experience of converting apps in to React from Jinja2 (Python) and Handlebars (NodeJS) templates"
-        transition={["fade"]} bgColor="tertiary">
+        transition={["fade"]}
+        bgColor="tertiary"
+      >
         <Heading size={6} textColor="Primary" caps>
           My interest & experience
         </Heading>
@@ -113,7 +117,9 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="Just a reminder that we are encouraged to challenge status-quo, although probably preaching to the already-converted"
-        transition={["slide"]} bgColor="black">
+        transition={["slide"]}
+        bgColor="black"
+      >
         <BlockQuote>
           <Quote>Consider alternatives</Quote>
           <Cite>SE Tech Constitution</Cite>
@@ -125,7 +131,9 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="Original plan was to have a coding workshop but I think that can be the next event"
-        transition={["fade"]} bgColor="tertiary">
+        transition={["fade"]}
+        bgColor="tertiary"
+      >
         <Heading size={6} textColor="Primary" caps>
           Talk Overview
         </Heading>
@@ -143,7 +151,9 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="High level concenpts which I am going to touch on a bit"
-        transition={["fade"]} bgColor="primary">
+        transition={["fade"]}
+        bgColor="primary"
+      >
         <Heading size={4} textColor="secondary" caps>
           React: Concepts
         </Heading>
@@ -164,7 +174,9 @@ export default class Presentation extends React.Component {
             <ListItem>Unidirectional flow</ListItem>
           </Appear>
           <Appear>
-            <ListItem>Mature - Facebook.com (v1 ahead), WhatsApp/Instagram web</ListItem>
+            <ListItem>
+              Mature - Facebook.com (v1 ahead), WhatsApp/Instagram web
+            </ListItem>
           </Appear>
           <Appear>
             <ListItem>Easy to Test</ListItem>
@@ -181,7 +193,8 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="React is just the View, jQuery has a lot of utilities, and Angular (MVC) closest competition takes the kitchen sink approach"
-        transition={["fade"]}>
+        transition={["fade"]}
+      >
         <Heading size={4} textColor="secondary" caps>
           Library not Framework
         </Heading>
@@ -215,8 +228,9 @@ export default class Presentation extends React.Component {
   slideA8 = () => {
     return (
       <Slide
-        nodes="Describes the UI and represents the state, here is a full React App. Notice there is no separate of HTML and JS"
-        transition={["fade"]}>
+        notes="Describes the UI and represents the state, here is a full React App. Notice there is no separate of HTML and JS"
+        transition={["fade"]}
+      >
         <Heading size={4} textColor="secondary" caps>
           Declarative style
         </Heading>
@@ -236,10 +250,28 @@ export default class Presentation extends React.Component {
     );
   };
 
+  slideA8B = () => {
+    return (
+      <Slide notes="Here is a stateful component - differentiate Props and State">
+        <Heading size={4} textColor="secondary" caps>
+          Stateful Components
+        </Heading>
+        <CodePane
+          lang="jsx"
+          source={require("raw-loader!../assets/stateful.example")}
+          margin="10px auto"
+        />
+      <Appear><Text>Yes JavaScript (ES6) has classes now</Text></Appear>
+      <Appear><Text>Well... Kind of</Text></Appear>
+      </Slide>
+    );
+  };
+
   slideOldCode = () =>
     <Slide
       notes="Old Frontend have a HTML, then you bind to it with JavaScript. Sometimes Two-way. Slow on the browser, repeating yourself, spaghetti code"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={8} textColor="secondary" caps>
         Remember this?
       </Heading>
@@ -254,7 +286,8 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="Components are basically functions that do one thing and are reusable across same or multiple projects"
-        transition={["fade"]}>
+        transition={["fade"]}
+      >
         <Heading size={4} textColor="secondary" caps>
           Reusable Components
         </Heading>
@@ -276,47 +309,43 @@ export default class Presentation extends React.Component {
   slideA9B = () =>
     <Slide
       notes="An exercise to see how you would divide up a section of the site. Is this one or multiple components? how many?"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         Exercise
       </Heading>
       <Text>How many components do you see?</Text>
       <Appear>
-      <Image
-        src={images.howmanya.replace("/", "")}
-        margin="0px auto 40px"
-        height="300px"
-      />
+        <Image
+          src={images.howmanya.replace("/", "")}
+          margin="0px auto 40px"
+          height="300px"
+        />
       </Appear>
       <Appear>
-      <Image
-        src={images.howmanyb.replace("/", "")}
-        margin="0px auto 40px"
-        height="300px"
-      />
+        <Image
+          src={images.howmanyb.replace("/", "")}
+          margin="0px auto 40px"
+          height="300px"
+        />
       </Appear>
       <Appear>
         <Text>Answer: 5 (according to FB)</Text>
       </Appear>
     </Slide>;
 
-
   slideA10 = () => {
     return (
       <Slide
         notes="Most JavaScript frameworks update the DOM much more than they have to. Reacts diffing algorithm is fast and changed how every other major FE lib works"
-        transition={["fade"]}>
-        <Heading
-          size={4}
-          textColor="secondary"
-          caps>
+        transition={["fade"]}
+      >
+        <Heading size={4} textColor="secondary" caps>
           Virtual DOM
         </Heading>
         <List>
           <Appear>
-            <ListItem>
-              Smart Reconciliation (update when necessary)
-            </ListItem>
+            <ListItem>Smart Reconciliation (update when necessary)</ListItem>
           </Appear>
         </List>
         <List>
@@ -337,7 +366,8 @@ export default class Presentation extends React.Component {
     return (
       <Slide
         notes="This is a powerful pattern, it reduces bugs and side-effects and allows async operations to be moved and tested outside the main flow"
-        transition={["fade"]}>
+        transition={["fade"]}
+      >
         <Heading size={4} textColor="secondary" caps>
           Unidirectional Flow
         </Heading>
@@ -359,15 +389,14 @@ export default class Presentation extends React.Component {
   slideA12 = () =>
     <Slide
       notes="Angular is popular for those who like Angular, not necessary those who like JavaScript. They have now included Unidirectional flow as recommended pattern, but it includes too many things like Animation"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         Competition
       </Heading>
       <List>
         <Appear>
-          <ListItem>
-            Angular 4: catch up game
-          </ListItem>
+          <ListItem>Angular 4: catch up game</ListItem>
         </Appear>
       </List>
       <List>
@@ -394,7 +423,8 @@ export default class Presentation extends React.Component {
   slideB1 = () =>
     <Slide
       notes="Because React works well with other Libs, all these features came to React toolchain and workflow very quickly"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         How React became the Queen of UI
       </Heading>
@@ -402,18 +432,22 @@ export default class Presentation extends React.Component {
         <ListItem>DOM and two-way binding</ListItem>
         <ListItem>Components are the future</ListItem>
         <ListItem>Developer experience</ListItem>
-        <ListItem>Modern tools: hot reloading, code splitting (bundles), ServiceWorkers</ListItem>
+        <ListItem>
+          Modern tools: hot reloading, code splitting (bundles), ServiceWorkers
+        </ListItem>
         <ListItem>Progressive Web Apps (..or React Native apps)</ListItem>
         <ListItem>Flexible, rendered on server</ListItem>
       </List>
     </Slide>;
 
-
   slideB2 = () =>
     <Slide
       notes="We should send less to the browser, so here is how that works - comes out of the box with React-Router package"
-      transition={["fade"]}>
-      <Heading size={4} textColor="secondary" caps>Route-based Chunking</Heading>
+      transition={["fade"]}
+    >
+      <Heading size={4} textColor="secondary" caps>
+        Route-based Chunking
+      </Heading>
       <Image
         src={images.routechunk.replace("/", "")}
         margin="0px auto 40px"
@@ -422,38 +456,45 @@ export default class Presentation extends React.Component {
       <List>
         <ListItem>Faster initial load, and less heavy on browsers</ListItem>
         <ListItem>Lazy load future paths</ListItem>
-        <ListItem>Webpack Tree-shaking ensures no unused code gets bundled</ListItem>
+        <ListItem>
+          Webpack Tree-shaking ensures no unused code gets bundled
+        </ListItem>
       </List>
     </Slide>;
 
   slideB2B = () =>
-      <Slide
-        notes="React is not just good for frontend, does anyone know what logo is this?"
-        transition={["zoom"]} bgColor="primary">
-        <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-          Future
-        </Heading>
-        <Appear>
-          <Image
+    <Slide
+      notes="React is not just good for frontend, does anyone know what logo is this?"
+      transition={["zoom"]}
+      bgColor="primary"
+    >
+      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        Future
+      </Heading>
+      <Appear>
+        <Image
           src={images.graphql.replace("/", "")}
           margin="0px auto 40px"
           height="200px"
         />
-        </Appear>
-        <Appear>
-          <Text>React (Relay) Components & GraphQL</Text>
-        </Appear>
-      </Slide>;
+      </Appear>
+      <Appear>
+        <Text>React (Relay) Components & GraphQL</Text>
+      </Appear>
+    </Slide>;
 
-slideB3 = () =>
+  slideB3 = () =>
     <Slide
       notes="Even using REST API is tricky. Here is one of our common problems pointed out recently"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         Future
       </Heading>
       <List>
-        <ListItem>REST shortcomings (too many requests, e.g. n+1 queries)</ListItem>
+        <ListItem>
+          REST shortcomings (too many requests, e.g. n+1 queries)
+        </ListItem>
       </List>
       <CodePane
         lang="js"
@@ -465,22 +506,26 @@ slideB3 = () =>
         source={require("raw-loader!../assets/graphql.example")}
         margin="10px auto"
       />
-    </Slide>
+    </Slide>;
   slideB4 = () => {
     return (
       <Slide
         notes="GraphQL in a nutshell: from a recent announcement from Github a month or two ago"
-        transition={["slide"]} bgColor="white">
-      <Heading size={4} textColor="black" caps>
-        Future is here: GraphQL
-      </Heading>
-      <List>
-        <ListItem>GraphQL offers significantly more flexibility</ListItem>
-        <ListItem>Define precisely the data you want—and only the data you want</ListItem>
-        <ListItem>Replace multiple REST requests with a single call</ListItem>
-        <ListItem>Github API (v4) is no longer REST but GraphQL</ListItem>
-        <ListItem>Relay: React Components request what they need</ListItem>
-      </List>
+        transition={["slide"]}
+        bgColor="white"
+      >
+        <Heading size={4} textColor="black" caps>
+          Future is here: GraphQL
+        </Heading>
+        <List>
+          <ListItem>GraphQL offers significantly more flexibility</ListItem>
+          <ListItem>
+            Define precisely the data you want—and only the data you want
+          </ListItem>
+          <ListItem>Replace multiple REST requests with a single call</ListItem>
+          <ListItem>Github API (v4) is no longer REST but GraphQL</ListItem>
+          <ListItem>Relay: React Components request what they need</ListItem>
+        </List>
       </Slide>
     );
   };
@@ -488,7 +533,8 @@ slideB3 = () =>
   slideC1 = () =>
     <Slide
       notes="I think people already know these but here is a review"
-      transition={["fade"]}>
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         Why should we use React at SE?
       </Heading>
@@ -505,8 +551,9 @@ slideB3 = () =>
 
   slideC2 = () =>
     <Slide
-      notes="We have already started this work in hackdays with Mario, Dario and Martin"
-      transition={["fade"]}>
+      notes="We have already started this work in hackdays with Mario, Dario and Martin. Personal experience with greenfield vs slow transition. Hackday teams should be constrained to MVP - wider discussion is needed"
+      transition={["fade"]}
+    >
       <Heading size={4} textColor="secondary" caps>
         How can we use React at SE?
       </Heading>
@@ -519,16 +566,14 @@ slideB3 = () =>
     </Slide>;
 
   slideQA = () =>
-    <Slide
-      transition={["spin"]}>
+    <Slide transition={["spin"]}>
       <Heading size={4} textColor="secondary" caps>
         Questions?
       </Heading>
     </Slide>;
 
   slideEnd = () =>
-    <Slide
-      transition={["slide"]}>
+    <Slide transition={["slide"]}>
       <Heading size={4} textColor="secondary" caps>
         Thank You
       </Heading>
@@ -544,8 +589,7 @@ slideB3 = () =>
       <Deck
         transition={["zoom", "slide"]}
         transitionDuration={500}
-        theme={theme}
-      >
+        theme={theme}>
         {this.slideA1()}
         {this.slideA2()}
         {this.slideA3()}
@@ -554,6 +598,7 @@ slideB3 = () =>
         {this.slideA6()}
         {this.slideA7()}
         {this.slideA8()}
+        {this.slideA8B()}
         {this.slideOldCode()}
         {this.slideA9()}
         {this.slideA9B()}

@@ -76,7 +76,9 @@ export default class Presentation extends React.Component {
   };
   slideA2 = () => {
     return (
-      <Slide transition={["slide"]} bgColor="black">
+      <Slide
+        notes="Frontend is important part of architecture. Better FE means more performant application and infrastructure"
+        transition={["slide"]} bgColor="black">
         <Image
           src={images.kat.replace("/", "")}
           margin="0px auto 40px"
@@ -90,7 +92,9 @@ export default class Presentation extends React.Component {
   };
   slideA3 = () => {
     return (
-      <Slide transition={["fade"]} bgColor="tertiary">
+      <Slide
+        notes="Created both greenfield projects and experience of converting apps in to React from Jinja2 (Python) and Handlebars (NodeJS) templates"
+        transition={["fade"]} bgColor="tertiary">
         <Heading size={6} textColor="Primary" caps>
           My interest & experience
         </Heading>
@@ -107,7 +111,9 @@ export default class Presentation extends React.Component {
 
   slideA4 = () => {
     return (
-      <Slide transition={["slide"]} bgColor="black">
+      <Slide
+        notes="Just a reminder that we are encouraged to challenge status-quo, although probably preaching to the already-converted"
+        transition={["slide"]} bgColor="black">
         <BlockQuote>
           <Quote>Consider alternatives</Quote>
           <Cite>SE Tech Constitution</Cite>
@@ -117,7 +123,9 @@ export default class Presentation extends React.Component {
   };
   slideA5 = () => {
     return (
-      <Slide transition={["fade"]} bgColor="tertiary">
+      <Slide
+        notes="Original plan was to have a coding workshop but I think that can be the next event"
+        transition={["fade"]} bgColor="tertiary">
         <Heading size={6} textColor="Primary" caps>
           Talk Overview
         </Heading>
@@ -133,7 +141,9 @@ export default class Presentation extends React.Component {
 
   slideA6 = () => {
     return (
-      <Slide transition={["fade"]} bgColor="primary">
+      <Slide
+        notes="High level concenpts which I am going to touch on a bit"
+        transition={["fade"]} bgColor="primary">
         <Heading size={4} textColor="secondary" caps>
           React: Concepts
         </Heading>
@@ -169,7 +179,9 @@ export default class Presentation extends React.Component {
 
   slideA7 = () => {
     return (
-      <Slide>
+      <Slide
+        notes="React is just the View, jQuery has a lot of utilities, and Angular (MVC) closest competition takes the kitchen sink approach"
+        transition={["fade"]}>
         <Heading size={4} textColor="secondary" caps>
           Library not Framework
         </Heading>
@@ -202,7 +214,9 @@ export default class Presentation extends React.Component {
 
   slideA8 = () => {
     return (
-      <Slide>
+      <Slide
+        nodes="Describes the UI and represents the state, here is a full React App. Notice there is no separate of HTML and JS"
+        transition={["fade"]}>
         <Heading size={4} textColor="secondary" caps>
           Declarative style
         </Heading>
@@ -223,7 +237,9 @@ export default class Presentation extends React.Component {
   };
 
   slideOldCode = () =>
-    <Slide>
+    <Slide
+      notes="Old Frontend have a HTML, then you bind to it with JavaScript. Sometimes Two-way. Slow on the browser, repeating yourself, spaghetti code"
+      transition={["fade"]}>
       <Heading size={8} textColor="secondary" caps>
         Remember this?
       </Heading>
@@ -236,7 +252,9 @@ export default class Presentation extends React.Component {
 
   slideA9 = () => {
     return (
-      <Slide>
+      <Slide
+        notes="Components are basically functions that do one thing and are reusable across same or multiple projects"
+        transition={["fade"]}>
         <Heading size={4} textColor="secondary" caps>
           Reusable Components
         </Heading>
@@ -256,7 +274,9 @@ export default class Presentation extends React.Component {
   };
 
   slideA9B = () =>
-    <Slide>
+    <Slide
+      notes="An exercise to see how you would divide up a section of the site. Is this one or multiple components? how many?"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         Exercise
       </Heading>
@@ -283,13 +303,13 @@ export default class Presentation extends React.Component {
 
   slideA10 = () => {
     return (
-      <Slide>
+      <Slide
+        notes="Most JavaScript frameworks update the DOM much more than they have to. Reacts diffing algorithm is fast and changed how every other major FE lib works"
+        transition={["fade"]}>
         <Heading
-          notes="most JavaScript frameworks update the DOM much more than they have to."
           size={4}
           textColor="secondary"
-          caps
-        >
+          caps>
           Virtual DOM
         </Heading>
         <List>
@@ -315,7 +335,9 @@ export default class Presentation extends React.Component {
 
   slideA11 = () => {
     return (
-      <Slide>
+      <Slide
+        notes="This is a powerful pattern, it reduces bugs and side-effects and allows async operations to be moved and tested outside the main flow"
+        transition={["fade"]}>
         <Heading size={4} textColor="secondary" caps>
           Unidirectional Flow
         </Heading>
@@ -335,7 +357,9 @@ export default class Presentation extends React.Component {
   };
 
   slideA12 = () =>
-    <Slide>
+    <Slide
+      notes="Angular is popular for those who like Angular, not necessary those who like JavaScript. They have now included Unidirectional flow as recommended pattern, but it includes too many things like Animation"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         Competition
       </Heading>
@@ -368,7 +392,9 @@ export default class Presentation extends React.Component {
     </Slide>;
 
   slideB1 = () =>
-    <Slide>
+    <Slide
+      notes="Because React works well with other Libs, all these features came to React toolchain and workflow very quickly"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         How React became the Queen of UI
       </Heading>
@@ -384,7 +410,9 @@ export default class Presentation extends React.Component {
 
 
   slideB2 = () =>
-    <Slide>
+    <Slide
+      notes="We should send less to the browser, so here is how that works - comes out of the box with React-Router package"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>Route-based Chunking</Heading>
       <Image
         src={images.routechunk.replace("/", "")}
@@ -399,7 +427,9 @@ export default class Presentation extends React.Component {
     </Slide>;
 
   slideB2B = () =>
-      <Slide transition={["zoom"]} bgColor="primary">
+      <Slide
+        notes="React is not just good for frontend, does anyone know what logo is this?"
+        transition={["zoom"]} bgColor="primary">
         <Heading size={1} fit caps lineHeight={1} textColor="secondary">
           Future
         </Heading>
@@ -416,7 +446,9 @@ export default class Presentation extends React.Component {
       </Slide>;
 
 slideB3 = () =>
-    <Slide>
+    <Slide
+      notes="Even using REST API is tricky. Here is one of our common problems pointed out recently"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         Future
       </Heading>
@@ -436,7 +468,9 @@ slideB3 = () =>
     </Slide>
   slideB4 = () => {
     return (
-      <Slide transition={["slide"]} bgColor="white">
+      <Slide
+        notes="GraphQL in a nutshell: from a recent announcement from Github a month or two ago"
+        transition={["slide"]} bgColor="white">
       <Heading size={4} textColor="black" caps>
         Future is here: GraphQL
       </Heading>
@@ -452,23 +486,27 @@ slideB3 = () =>
   };
 
   slideC1 = () =>
-    <Slide>
+    <Slide
+      notes="I think people already know these but here is a review"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         Why should we use React at SE?
       </Heading>
       <List>
         <ListItem>Already have REST API - decoupling easier</ListItem>
         <ListItem>More state on client side (cache)</ListItem>
-        <ListItem>Less calls to backend</ListItem>
+        <ListItem>Less calls to the back-end</ListItem>
         <ListItem>User perceives better performance</ListItem>
-        <ListItem>Progressive Web-App ready</ListItem>
+        <ListItem>Progressive Web-App (PWA) ready</ListItem>
         <ListItem>Developer experience</ListItem>
         <ListItem>Future proofing </ListItem>
       </List>
     </Slide>;
 
   slideC2 = () =>
-    <Slide>
+    <Slide
+      notes="We have already started this work in hackdays with Mario, Dario and Martin"
+      transition={["fade"]}>
       <Heading size={4} textColor="secondary" caps>
         How can we use React at SE?
       </Heading>
@@ -481,14 +519,16 @@ slideB3 = () =>
     </Slide>;
 
   slideQA = () =>
-    <Slide>
+    <Slide
+      transition={["spin"]}>
       <Heading size={4} textColor="secondary" caps>
         Questions?
       </Heading>
     </Slide>;
 
   slideEnd = () =>
-    <Slide>
+    <Slide
+      transition={["slide"]}>
       <Heading size={4} textColor="secondary" caps>
         Thank You
       </Heading>

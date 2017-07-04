@@ -1,0 +1,9 @@
+const renderUsers = (users) => {
+  return (
+    users.map((user) => {
+      return (
+        <UserProfile key={user.id} {...user} />
+      )
+    })
+  )
+}

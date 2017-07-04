@@ -1,0 +1,7 @@
+graphql.get(`query { stories { id, text } }`).then(
+  stories => {
+    // A list of story items:
+    // `[ { id: "...", text: "..." } ]`
+    console.log(stories);
+  }
+);
